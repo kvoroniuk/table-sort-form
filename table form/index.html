@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="model.js"></script>
+    <script src="controller.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+</head>
+<body>
+<div class="row">
+<table class="col s8">
+    <thead>
+    <tr>
+        <th data-field="id" id="fn">First Name</th>
+        <th data-field="name" id="sn">Last Name</th>
+        <th data-field="phone">Phone</th>
+        <th data-field="gender">Genser</th>
+        <th data-field="age" id="nm">Age</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    </tbody>
+</table>
+    <form class="col s4" id="form">
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="first_name" type="text">
+                <label for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s12">
+                <input id="last_name" type="text">
+                <label for="last_name">Last Name</label>
+                </div>
+                <div class="input-field col s12">
+                <input id="phone" type="tel">
+                <label for="phone">Phone</label>
+            </div>
+                <div class="input-field col s12">
+                    <select id="gender" onchange="Change()">
+                        <!--<option value="" disabled selected></option>-->
+                        <option value="male">male</option>
+                        <option value="female">female</option>
+                    </select>
+                    <label for="gender">Gender</label>
+                </div>
+            <div class="input-field col s12">
+                <input id="age" type="text">
+                <label for="age" data-error="wrong" data-success="right">Age</label>
+                <input type="button" class="btn waves-effect waves-light" value="ADD" name="action"/>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
