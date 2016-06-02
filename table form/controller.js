@@ -13,6 +13,7 @@ window.addEventListener('load', function () {
         if (Validate()) {
             var person = GetValues();
             SetValues (person);
+            Clear ();
         }
     });
     //firstname
@@ -126,4 +127,11 @@ function sortTable(f,n){
 function deleteRow(r) {
     var i = r.parentNode.parentNode.rowIndex;
     document.getElementsByTagName("table")[0].deleteRow(i);
+}
+
+function Clear () {
+    for (var i=0; i<5; i++) {
+        var form = document.getElementById('form').getElementsByTagName('input')[i];
+        form.value = "";
+    }
 }
